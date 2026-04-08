@@ -1,0 +1,184 @@
+/* --- THE REAL DEAL: FULL APP STYLES --- */
+
+/* 1. Global Reset & Theme */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: #fafafa;
+    color: #262626;
+    padding-bottom: 70px; /* Space for bottom navigation */
+}
+
+/* 2. Top Navigation Bar */
+.top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px); /* Glass effect */
+    border-bottom: 1px solid #dbdbdb;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Arial Black', sans-serif;
+    font-size: 1.4rem;
+    letter-spacing: -1.5px;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.icons {
+    display: flex;
+    gap: 20px;
+    font-size: 1.4rem;
+}
+
+/* 3. The Feed & Post Cards */
+.feed {
+    padding: 10px 0;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.post-card {
+    background: white;
+    border: 1px solid #dbdbdb;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+}
+
+.avatar {
+    width: 35px;
+    height: 35px;
+    background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.verified-tick {
+    font-size: 0.8rem;
+    margin-left: 6px;
+    color: #1DA1F2;
+    background: #e1f5fe;
+    border-radius: 50%;
+    padding: 2px;
+}
+
+.post-image {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* Keeps images perfectly square */
+    background-color: #efefef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+}
+
+.interactions {
+    padding: 12px;
+    display: flex;
+    gap: 15px;
+    font-size: 1.5rem;
+}
+
+.caption {
+    padding: 0 12px 12px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+}
+
+/* 4. Message Page Specific Styles */
+.message-list {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    min-height: 100vh;
+}
+
+.chat-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-bottom: 1px solid #fafafa;
+    transition: background 0.2s;
+}
+
+.chat-item:active {
+    background: #efefef;
+}
+
+.chat-info {
+    flex-grow: 1;
+    margin-left: 15px;
+}
+
+.chat-info strong {
+    display: block;
+    font-size: 1rem;
+}
+
+.chat-info p {
+    margin: 3px 0 0;
+    font-size: 0.85rem;
+    color: #8e8e8e;
+}
+
+.unread-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #0095f6;
+    border-radius: 50%;
+}
+
+/* 5. Bottom Navigation Bar */
+.bottom-nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    border-top: 1px solid #dbdbdb;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0;
+    z-index: 100;
+}
+
+.bottom-nav a, .bottom-nav button {
+    background: none;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+.add-btn {
+    background: black !important;
+    color: white !important;
+    padding: 4px 18px !important;
+    border-radius: 10px !important;
+    font-weight: bold;
+}
+
+/* 6. Responsive Tweaks */
+@media (min-width: 768px) {
+    .post-card {
+        border-radius: 12px;
+        margin-top: 20px;
+    }
+}
